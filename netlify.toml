@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/cjcdetailing-website"
+  publish = "dist/cjcdetailing-website/browser"
   command = "ng build --prod"
 
 [[redirects]]
