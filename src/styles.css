@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+/* Remove browser default spacing */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
+}

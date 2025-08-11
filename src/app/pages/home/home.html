@@ -1,0 +1,123 @@
+<div class="page-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Premium Auto Detailing <span class="accent-text">For Those Who Care</span></h1>
+                <p>Professional detailing services that restore your vehicle's beauty and protect your investment.</p>
+                <div class="hero-buttons">
+                    <a href="" class="btn btn-primary">Schedule Your Detail</a>
+                    <a routerLink="/services" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlight Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>CJC Detailing Services</h2>
+                <p>From basic maintenance to full transformations, our premium detailing services are designed to meet
+                    your specific needs.</p>
+            </div>
+            <div class="services-grid">
+                @for (service of services; track $index) {
+                <div class="service-card">
+                    <div class="service-image">
+                        <img [src]="service.image" [alt]="service.title">
+                    </div>
+                    <div class="service-content">
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                        <ul class="service-features">
+                            @for (feature of service.features; track $index) {
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>{{ feature }}</span>
+                            </li>
+                            }
+                        </ul>
+                        <a routerLink="/services" class="service-link">
+                            Learn More <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="why-choose-content">
+                <div class="why-choose-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Professional car detailing">
+                </div>
+                <div class="why-choose-text">
+                    <h2>Why Choose CJC Detailing?</h2>
+                    <div class="features-list">
+                        @for (feature of whyChooseUs; track $index) {
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="feature-content">
+                                <h3>{{ feature.title }}</h3>
+                                <p>{{ feature.description }}</p>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it. Here's what our satisfied customers have to say about our services.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                @for (testimonial of testimonials; track $index) {
+                <div class="testimonial-card">
+                    <div class="stars">
+                        @for (star of stars; track $index) {
+                        <span class="star">★</span>
+                        }
+                    </div>
+                    <p class="testimonial-text">"{{ testimonial.text }}"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">{{ testimonial.initials }}</div>
+                        <div class="author-info">
+                            <h4>{{ testimonial.author }}</h4>
+                            <p>{{ testimonial.role }}</p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Vehicle?</h2>
+                <p>Schedule your appointment today and experience the CJC Detailing difference.</p>
+                <div class="cta-buttons">
+                    <a href="" class="btn btn-cta-primary">Schedule Now</a>
+                    <a routerLink="/contact" class="btn btn-cta-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
