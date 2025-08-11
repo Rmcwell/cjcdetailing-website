@@ -24,7 +24,7 @@ export class ContactComponent {
             lastName: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
             phone: ['', Validators.required],
-            service: [''],
+            service: ['', Validators.required],
             message: ['', Validators.required]
         });
     }
@@ -32,7 +32,6 @@ export class ContactComponent {
     onSubmit(): void {
         if (this.contactForm.valid) {
             console.log('Form submitted:', this.contactForm.value);
-            // Here you would typically send the form data to your backend service
             alert('Message sent successfully! We will get back to you soon.');
             this.contactForm.reset();
         }

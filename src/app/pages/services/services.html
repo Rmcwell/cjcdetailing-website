@@ -1,0 +1,91 @@
+<div class="services-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Our Detailing <span class="highlight">Services</span></h1>
+                <p>
+                    We offer a comprehensive range of detailing services to keep your
+                    vehicle looking its best. Each service is performed with
+                    meticulous attention to detail by our team of experienced
+                    professionals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                @for (service of services; track service.id) {
+                <div class="service-item" [class.reverse]="service.reverse">
+                    <div class="service-image">
+                        <img [src]="service.image" [alt]="service.title" />
+                    </div>
+                    <div class="service-content">
+                        <span class="service-category">{{ service.category }}</span>
+                        <h2>{{ service.title }}</h2>
+                        <p class="service-description">{{ service.description }}</p>
+
+                        <div class="features-grid">
+                            @for (feature of service.features; track feature) {
+                            <div class="feature-item">
+                                <div class="check-icon">✓</div>
+                                <span>{{ feature }}</span>
+                            </div>
+                            }
+                        </div>
+
+                        <div class="service-footer">
+                            <span class="price">{{ service.price }}</span>
+                            <button class="cta-button" (click)="onBookService(service.id)">
+                                {{ service.buttonText }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Have questions about our services? Here are answers to some common questions.</p>
+            </div>
+
+            <div class="faq-list">
+                @for (faq of faqs; track faq.question) {
+                <div class="faq-item">
+                    <h3>{{ faq.question }}</h3>
+                    <p>{{ faq.answer }}</p>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Schedule Your Service?</h2>
+            <p>
+                Contact us today to book your appointment or get a custom quote for
+                your specific needs.
+            </p>
+            <div class="cta-buttons">
+                <button class="primary-button">
+                    Contact Us
+                </button>
+                <button class="secondary-button">
+                    Call Now
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

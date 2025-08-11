@@ -9,7 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [
     RouterOutlet,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
