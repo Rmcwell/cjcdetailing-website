@@ -51,6 +51,36 @@
         </div>
     </section>
 
+    <!-- Other Services -->
+    <div class="otherServices-container">
+        <div class="otherServices-header">
+            <h2>Other Services</h2>
+        </div>
+        <div class="otherServices-grid">
+            @for (otherService of otherServices; track otherService.title) {
+            <section class="otherService-card">
+                <h2>{{ otherService.title }}</h2>
+
+                @if (otherService.price) {
+                <p class="otherService-price">{{ otherService.price }}</p>
+                }
+
+                <ul>
+                    @for (item of otherService.details; track item) {
+                    <li>{{ item }}</li>
+                    }
+                </ul>
+            </section>
+            }
+        </div>
+        <p class="click-here-p">To explore our full range of detailing services and add-ons,
+            <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" target="_blank" class="click-here-a">
+                click here
+            </a>
+        </p>
+    </div>
+
+
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
@@ -79,12 +109,11 @@
                 your specific needs.
             </p>
             <div class="cta-buttons">
-                <button class="primary-button">
-                    Contact Us
-                </button>
-                <button class="secondary-button">
-                    Call Now
-                </button>
+                <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" class="primary-button"
+                    target="_blank">
+                    Schedule Now
+                </a>
+                <a routerLink="/contact" class="secondary-button">Contact Us</a>
             </div>
         </div>
     </section>
