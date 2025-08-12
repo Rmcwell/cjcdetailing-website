@@ -1,0 +1,133 @@
+/* Page Container */
+.page-container {
+    max-width: 100%;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #cbd5e0;
+    background-color: #111827;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-color: #1f2937;
+    color: white;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+}
+
+.hero-text {
+    max-width: 36rem;
+}
+
+.hero-text h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+}
+
+.accent-text {
+    color: #3b82f6;
+}
+
+.hero-text p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero-text p {
+        font-size: 1.25rem;
+    }
+}
+
+/* About CJC Section */
+.aboutCJC-section {
+    padding: 4rem 2rem;
+    background-color: #374151;
+}
+
+.aboutCJC-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+    background-color: #1f2937;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .aboutCJC-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.aboutCJC-image {
+    flex: 1;
+    align-self: center;
+}
+
+.aboutCJC-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.aboutCJC-text {
+    flex: 1;
+}
+
+.aboutCJC-text p {
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+}
+
+.aboutCJC-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Stack */
+@media (max-width: 768px) {
+    .aboutCJC-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutCJC-text {
+        margin-top: 1rem;
+    }
+}
