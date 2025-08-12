@@ -158,13 +158,6 @@ export class ServicesComponent {
         'Restores foggy or oxidized headlights',
         'Improves clarity and nighttime visibility'
       ]
-    },
-    {
-      title: 'Gift Certificate',
-      price: 'Available',
-      details: [
-        'Perfect for gifting',
-      ]
     }
   ];
 
