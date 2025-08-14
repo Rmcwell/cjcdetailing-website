@@ -8,7 +8,7 @@ import { LucideIconsModule } from '../../lucide.module';
     standalone: true,
     imports: [
         RouterModule,
-        FormsModule, 
+        FormsModule,
         ReactiveFormsModule,
         LucideIconsModule
     ],
@@ -25,15 +25,8 @@ export class ContactComponent {
             email: ['', [Validators.required, Validators.email]],
             phone: ['', Validators.required],
             service: ['', Validators.required],
-            message: ['', Validators.required]
+            message: ['', Validators.required],
+            botField: [''] // Honeypot field
         });
-    }
-
-    onSubmit(): void {
-        if (this.contactForm.valid) {
-            console.log('Form submitted:', this.contactForm.value);
-            alert('Message sent successfully! We will get back to you soon.');
-            this.contactForm.reset();
-        }
     }
 }

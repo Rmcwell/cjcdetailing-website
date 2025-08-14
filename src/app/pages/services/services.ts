@@ -26,7 +26,7 @@ export class ServicesComponent {
       category: 'Maintenance',
       title: 'A Service | Great Maintenance Package',
       description: 'Our maintenance detail is designed to keep your vehicle looking its best between full detailing services. This package includes all the essentials to maintain your vehicle\'s appearance.',
-      image: 'https://images.unsplash.com/photo-1694678505383-676d78ea3b96?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1681113376967-1fcd00cf78ee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       price: 'Starting at $120',
       buttonText: 'Book Now',
       features: [
@@ -44,7 +44,7 @@ export class ServicesComponent {
       category: 'Complete Package',
       title: 'B Service | Full Exterior & Minor Interior',
       description: 'Our signature full detail service provides comprehensive cleaning and protection for both the interior and exterior of your vehicle, restoring its showroom appearance.',
-      image: 'https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1694678505374-817757bcae89?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       price: 'Starting at $299',
       buttonText: 'Book Now',
       features: [
@@ -80,7 +80,7 @@ export class ServicesComponent {
       category: 'Premium Protection',
       title: 'XPEL Window Tinting',
       description: 'Make your vehicle stand out with our customization services. From chrome delete to wheel refinishing, we can help you achieve a unique look.',
-      image: '',
+      image: 'assets/images/jeep-full.jpg',
       price: 'Starting at $250',
       buttonText: 'Book Now',
       features: [
@@ -164,7 +164,7 @@ export class ServicesComponent {
   faqs = [
     {
       question: 'How long does a full detail take?',
-      answer: 'A full interior and exterior detail typically takes 6-8 hours, depending on the size and condition of the vehicle. We recommend scheduling a full day for your appointment.'
+      answer: 'A full interior and exterior detail typically takes 6-8 hours, depending on the size and condition of the vehicle.'
     },
     {
       question: 'Do I need to prepare my vehicle before bringing it in?',

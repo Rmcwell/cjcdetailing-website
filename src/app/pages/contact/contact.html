@@ -20,7 +20,18 @@
                 <div class="contact-form-container">
                     <div class="contact-form-card">
                         <h2>Send Us a Message</h2>
-                        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <!-- Need to add the form hidden to src/index.html for some reason to get Netlify to pick up the submission -->
+                        <form name="contact" method="POST" [formGroup]="contactForm" netlify netlify-honeypot="bot-field">
+
+                            <!-- Netlify form detection -->
+                            <input type="hidden" name="form-name" value="contact" />
+                            
+                            <!-- Honeypot field (hidden from users) -->
+                            <p class="honeypot" style="display:none;" aria-hidden="true">
+                                <label for="bot-field">Don't fill this out if you're human:</label>
+                                <input type="text" name="bot-field" id="bot-field" formControlName="botField" />
+                            </p>
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">First Name <span class="required-asterisk">*</span></label>

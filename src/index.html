@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>CjcdetailingWebsite</title>
@@ -7,7 +8,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
+
+  <!-- Hidden form field to get it to work -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <!-- Match the same field names as your Angular form -->
+    <input type="hidden" name="form-name" value="contact" />
+
+    <input type="text" name="bot-field" />
+
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <select name="service">
+      <option value="">Select a service</option>
+      <option value="maintenance">Maintenance Detail</option>
+      <option value="full">Full Interior/Exterior Detail</option>
+      <option value="xpel">XPEL Tinting & Protection</option>
+      <option value="custom">Customizations</option>
+      <option value="other">Other</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+
+
 </body>
+
 </html>
