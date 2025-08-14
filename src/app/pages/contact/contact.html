@@ -17,7 +17,7 @@
             <div class="contact-grid">
                 <div class="contact-form-container">
                     <div class="contact-form-card">
-                        @if (formSubmitted)
+                        @if (!formSubmitted)
                         {
                         <h2>Send Us a Message</h2>
                         <form name="contact" method="POST" netlify netlify-honeypot="bot-field"
