@@ -62,7 +62,7 @@ export class ServicesComponent {
       category: 'Complete Package',
       title: 'C Service | Full Exterior & Full Interior',
       description: 'Protect your vehicle from the elements and enhance its appearance with our professional window tinting and paint protection film services.',
-      image: 'https://images.unsplash.com/photo-1621611175054-08b4be2b67a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       price: 'Starting at $425',
       buttonText: 'Book Now',
       features: [
@@ -80,7 +80,7 @@ export class ServicesComponent {
       category: 'Premium Protection',
       title: 'XPEL Window Tinting',
       description: 'Make your vehicle stand out with our customization services. From chrome delete to wheel refinishing, we can help you achieve a unique look.',
-      image: 'assets/images/jeep-full.jpg',
+      image: 'https://images.unsplash.com/photo-1610647929723-a8922852cd44?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       price: 'Starting at $250',
       buttonText: 'Book Now',
       features: [
@@ -98,7 +98,7 @@ export class ServicesComponent {
   otherServices: OtherService[] = [
     {
       title: 'Full Exterior Only',
-      price: 'Cars: $220.00 | SUVs, Trucks, Vans: $260.00',
+      price: 'Starting at $220',
       details: [
         'Thorough wash and dry of vehicle',
         'Bug, tar, and sap removal',
@@ -112,7 +112,7 @@ export class ServicesComponent {
     },
     {
       title: 'Full Interior Only',
-      price: 'Cars: $220.00 | SUVs, Trucks, Vans: $260.00',
+      price: 'Starting at $220.00',
       details: [
         'Complete interior vacuum',
         'Shampoo and steam clean',
@@ -126,7 +126,7 @@ export class ServicesComponent {
     },
     {
       title: 'Premium Exterior Wash',
-      price: 'Cars: $40.00 | SUVs, Trucks, Vans: $60.00',
+      price: 'Starting at $40.00',
       details: [
         'Premium hand wash',
         'Wheel + tire cleaning',

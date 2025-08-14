@@ -115,6 +115,17 @@
     line-height: 1.4;
 }
 
+.phoneNumber,
+.email {
+    text-decoration: none;
+}
+
+.address,
+.phoneNumber:hover,
+.email:hover {
+    text-decoration: underline;
+}
+
 /* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid #4b5563;
