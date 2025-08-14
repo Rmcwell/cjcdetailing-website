@@ -5,10 +5,12 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1><span class="accent-text">CJC Detailing</span><br /> Premium Auto Detailing</h1>
-                <p>We provide expert automotive care that restores, protects, and enhances your vehicle with attention to
-                detail and trusted craftsmanship.</p>
+                <p>We provide expert automotive care that restores, protects, and enhances your vehicle with attention
+                    to
+                    detail and trusted craftsmanship.</p>
                 <div class="hero-buttons">
-                    <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" class="btn btn-primary" target="_blank">Schedule Your Detail</a>
+                    <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" class="btn btn-primary"
+                        target="_blank">Schedule Your Detail</a>
                     <a routerLink="/services" class="btn btn-secondary">View Services</a>
                 </div>
             </div>
@@ -25,7 +27,7 @@
             </div>
             <div class="services-grid">
                 @for (service of services; track $index) {
-                <div class="service-card">
+                <div class="service-card" routerLink="/services">
                     <div class="service-image">
                         <img [src]="service.image" [alt]="service.title">
                     </div>
@@ -115,7 +117,8 @@
                 <h2>Ready to Transform Your Vehicle?</h2>
                 <p>Schedule your appointment today and experience the CJC Detailing difference.</p>
                 <div class="cta-buttons">
-                    <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" class="btn btn-cta-primary" target="_blank">Schedule Now</a>
+                    <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" class="btn btn-cta-primary"
+                        target="_blank">Schedule Now</a>
                     <a routerLink="/contact" class="btn btn-cta-secondary">Contact Us</a>
                 </div>
             </div>

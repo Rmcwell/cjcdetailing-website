@@ -9,4 +9,9 @@ body {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 60px; }
+    scroll-padding-top: 60px; 
+}
+
+h1 {
+    margin-top: 0;
+}

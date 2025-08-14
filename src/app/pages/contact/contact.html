@@ -15,60 +15,76 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
-
-                <!-- Contact Form -->
                 <div class="contact-form-container">
                     <div class="contact-form-card">
+                        @if (formSubmitted)
+                        {
                         <h2>Send Us a Message</h2>
-                        <!-- Need to add the form hidden to src/index.html for some reason to get Netlify to pick up the submission -->
-                        <form name="contact" method="POST" [formGroup]="contactForm" netlify netlify-honeypot="bot-field">
+                        <form name="contact" method="POST" netlify netlify-honeypot="bot-field"
+                            [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
 
                             <!-- Netlify form detection -->
                             <input type="hidden" name="form-name" value="contact" />
-                            
-                            <!-- Honeypot field (hidden from users) -->
-                            <p class="honeypot" style="display:none;" aria-hidden="true">
-                                <label for="bot-field">Don't fill this out if you're human:</label>
-                                <input type="text" name="bot-field" id="bot-field" formControlName="botField" />
+                            <input type="hidden" name="subject" value="New Contact Form Submission" />
+
+                            <!-- Honeypot -->
+                            <p style="display:none;">
+                                <label>Don’t fill this out if you’re human:
+                                    <input type="text" name="bot-field" formControlName="botField" />
+                                </label>
                             </p>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="firstName">First Name <span class="required-asterisk">*</span></label>
+                                    <label for="firstName">
+                                        First Name <span aria-hidden="true" class="required-asterisk">*</span>
+                                    </label>
                                     <input type="text" id="firstName" formControlName="firstName" class="form-input">
                                 </div>
                                 <div class="form-group">
-                                    <label for="lastName">Last Name <span class="required-asterisk">*</span></label>
+                                    <label for="lastName">
+                                        Last Name <span aria-hidden="true" class="required-asterisk">*</span>
+                                    </label>
                                     <input type="text" id="lastName" formControlName="lastName" class="form-input">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="email">Email <span class="required-asterisk">*</span></label>
-                                    <input type="email" id="email" formControlName="email" class="form-input">
+                                    <label for="email">
+                                        Email <span aria-hidden="true" class="required-asterisk">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" formControlName="email"
+                                        class="form-input" autocomplete="email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
-                                    <input type="tel" id="phone" formControlName="phone" class="form-input">
+                                    <label for="phone">
+                                        Phone Number <span aria-hidden="true" class="required-asterisk">*</span>
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" formControlName="phone" class="form-input"
+                                        autocomplete="tel">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="service">Service Interested In <span class="required-asterisk">*</span></label>
-                                <select id="service" formControlName="service" class="form-select">
+                                <label for="service">
+                                    Service Interested In <span aria-hidden="true" class="required-asterisk">*</span>
+                                </label>
+                                <select id="service" name="service" formControlName="service" class="form-select">
                                     <option value="">Select a service</option>
-                                    <option value="maintenance">Maintenance Detail</option>
-                                    <option value="full">Full Interior/Exterior Detail</option>
-                                    <option value="xpel">XPEL Tinting & Protection</option>
-                                    <option value="custom">Customizations</option>
-                                    <option value="other">Other</option>
+                                    <option value="Maintenance">Maintenance Detail</option>
+                                    <option value="Full Ext/Int">Full Interior/Exterior Detail</option>
+                                    <option value="Tint">XPEL Tinting & Protection</option>
+                                    <option value="Custom">Customizations</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Message <span class="required-asterisk">*</span></label>
-                                <textarea id="message" formControlName="message" rows="5"
+                                <label for="message">
+                                    Message <span aria-hidden="true" class="required-asterisk">*</span>
+                                </label>
+                                <textarea id="message" name="message" formControlName="message" rows="5"
                                     placeholder="Tell us about your vehicle and what you're looking for..."
                                     class="form-textarea">
                                 </textarea>
@@ -83,6 +99,19 @@
                                 </svg>
                             </button>
                         </form>
+                        }
+                        @else
+                        {
+                        <div class="success-message" role="status" aria-live="polite">
+                            <h4>🚗 Message Sent! 🚗</h4>
+                            <p>Thank you for reaching out! We’ve received your message and will get back to you as soon
+                                as possible.</p>
+                            <p>In the meantime, feel free to explore our <a routerLink="/services"
+                                    class="success-link">services</a> or
+                                <a routerLink="/about" class="success-link">about</a> pages.
+                            </p>
+                        </div>
+                        }
                     </div>
                 </div>
 
@@ -172,7 +201,8 @@
                 <h2>Ready for the CJC Detailing Experience?</h2>
                 <p>Schedule your appointment today and see why we're Detroit's premier auto detailing service.</p>
                 <div class="cta-buttons">
-                    <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" class="cta-button" target="_blank">
+                    <a href="https://app.urable.com/virtual-shop/ZfzQ7ZQYrM7cAKNm1VWt" class="cta-button"
+                        target="_blank">
                         <lucide-icon name="calendar-days" class="calendar-icon"></lucide-icon>
                         <strong>Schedule Now</strong>
                     </a>
