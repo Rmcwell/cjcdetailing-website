@@ -61,17 +61,16 @@ export class ServicesComponent {
       id: 'C',
       category: 'Complete Package',
       title: 'C Service | Full Exterior & Full Interior',
-      description: 'Protect your vehicle from the elements and enhance its appearance with our professional window tinting and paint protection film services.',
+      description: 'This comprehensive, nose-to-tail package provides total vehicle rejuvenation, combining intensive exterior paint restoration and protection with a complete interior deep-clean and conditioning.',
       image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       price: 'Starting at $425',
       buttonText: 'Book Now',
       features: [
-        'Premium ceramic window tint',
-        'Heat & UV rejection',
-        'XPEL paint protection film',
-        'Self-healing technology',
-        'Ceramic coating options',
-        '10-year warranty'
+        'Complete wash and dry of vehicle',
+        'Full interior steam',
+        'Iron removal',
+        'Clay bar treatment',
+        'Deep clean & condition all leather',
       ],
       reverse: true
     },
@@ -79,17 +78,15 @@ export class ServicesComponent {
       id: 'window-tinting',
       category: 'Premium Protection',
       title: 'XPEL Window Tinting',
-      description: 'Make your vehicle stand out with our customization services. From chrome delete to wheel refinishing, we can help you achieve a unique look.',
+      description: 'Choose from our selection of high-performance XPEL window tinting films, including the ultimate XR Plus, the popular mid-tier XR, and the economical CS. All professionally installed on any or all windows.',
       image: 'https://images.unsplash.com/photo-1610647929723-a8922852cd44?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      price: 'Starting at $250',
+      price: 'Starting at $200',
       buttonText: 'Book Now',
       features: [
-        'Chrome delete',
-        'Wheel refinishing',
-        'Caliper painting',
-        'Interior trim wrapping',
-        'Headlight restoration',
-        'Accent lighting'
+        'Heat rejection',
+        'UV rejection',
+        'Glare Reduction',
+        'Window strip add-on'
       ],
       reverse: false
     }
